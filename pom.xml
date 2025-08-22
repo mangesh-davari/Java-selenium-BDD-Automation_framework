@@ -105,6 +105,19 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
+            <version>5.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.14</version>
+        </dependency>
+
 
     </dependencies>
 
@@ -222,7 +235,7 @@
                         <id>report</id>
                         <phase>post-integration-test</phase>
                         <goals>
-                            <goal>report</goal>
+                            <goal>reporting</goal>
                         </goals>
                         <configuration>
                             <sourceJsonReportDirectory>${project.build.directory}/cucumber-json</sourceJsonReportDirectory>
@@ -230,8 +243,6 @@
                             <expandBeforeAfterHooks>true</expandBeforeAfterHooks>
                             <expandStepHooks>true</expandStepHooks>
                             <expandDocStrings>true</expandDocStrings>
-                            <customCssFile>src/test/resources/cluecumber-custom.css</customCssFile>
-                            <customJsFile>src/test/resources/cluecumber-custom.js</customJsFile>
                         </configuration>
                     </execution>
                 </executions>
